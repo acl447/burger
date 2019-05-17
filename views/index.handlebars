@@ -2,7 +2,13 @@
 
 <h1>Eat-Da-Burger!</h1>
 
-<div id="burgerName"></div>
+<ul>
+  {{#each burgers}}
+    {{#unless }}
+      {{> cats/cat-block sleep=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
 <form action="">
     <textarea name="burgerInput" id="burgerInput"></textarea>
