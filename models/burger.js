@@ -11,22 +11,16 @@ let burger = {
         })
     },
 
-    insert: function (cols, vals, cb) {
+    insert: function (name, cb) {
 
-        orm.insertOne("burgers", cols, vals, function (res) {
-
-            cb(res);
-
-        })
+        orm.insertOne("burgers", ["burger_name", "devoured"], [name, false], cb);
+    
     },
 
     update: function (objColVals, condition, cb) {
 
-        orm.updateOne("burgers", objColVals, condition, function (res) {
+        orm.updateOne("burgers", objColVals, condition, cb);
 
-            cb(res);
-
-        })
     }
 
 
