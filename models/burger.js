@@ -11,7 +11,7 @@ let burger = {
         })
     },
 
-    insert: function (cb) {
+    insert: function (cols, vals, cb) {
 
         orm.insertOne("burgers", cols, vals, function (res) {
 
@@ -20,7 +20,7 @@ let burger = {
         })
     },
 
-    update: function (cb) {
+    update: function (objColVals, condition, cb) {
 
         orm.updateOne("burgers", objColVals, condition, function (res) {
 
