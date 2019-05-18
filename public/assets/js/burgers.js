@@ -1,4 +1,4 @@
-// Make sure I wait to attach handlers until the DOM is fully loaded.
+// Make sure to wait to attach handlers until the DOM is fully loaded.
 $(function () {
 
     $(".changeDevour").on("click", function (event) {
@@ -37,7 +37,8 @@ $(function () {
 
         let newBurger = {
 
-            name: ("#burgerInput").val().trim()
+            name: ("#burgerInput").val().trim(),
+            devoured: false
         };
 
         //Send the POST request.
