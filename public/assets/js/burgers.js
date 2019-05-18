@@ -38,7 +38,7 @@ $(function () {
 
         let newBurger = {
 
-            name: $("#burgerInput").val().trim(),
+            name: $("#burgerInput").val(),
             devoured: false
         };
 
