@@ -8,6 +8,7 @@ $(function () {
 
         let newDevour = $(this).data("newdevour");
 
+
         let newDevourState = {
 
             devoured: newDevour

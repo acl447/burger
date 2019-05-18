@@ -16,7 +16,7 @@ function printQuestionMarks(num) {
 function objToSql(ob) {
     let arr = [];
 
-    // loop through the keys and push the key/value as a string int arr
+    // loop through the keys and push the key/value as a string into arr
     for (let key in ob) {
         let value = ob[key];
         // check to skip hidden properties
