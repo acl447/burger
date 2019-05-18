@@ -4,13 +4,13 @@
 
 <ul>
   {{#each burgers}}
-    {{#unless }}
-      {{> cats/cat-block sleep=true}}
+    {{#unless devoured}}
+      {{> burgers/burgers-block devour=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<form action="">
+<form>
     <textarea name="burgerInput" id="burgerInput"></textarea>
     <br>
     <button type="submit" id="submit">Submit</button>
