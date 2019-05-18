@@ -23,10 +23,12 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
 
-    burger.insert(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function (result) {
+    burger.insert(req.body.burger_name, function(result) {
 
-        //Send back the ID of the new burger
-        res.json({ burgerName: req.body.burger_name });
+        console.log(result);
+
+        //After adding new burger, refresh page
+        res.redirect("/");
     });
 });
 
