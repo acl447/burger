@@ -13,7 +13,7 @@ app.use(express.json());
 
 let exphbs = require("express-handlebars");
 
-//Set up handlebars
+//Set handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 

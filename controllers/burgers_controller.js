@@ -32,15 +32,15 @@ router.post("/api/burgers", function (req, res) {
     });
 });
 
-router.put("/api/burgers", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
 
-    let condition = "id = " + req.body.id;
+    let condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
     burger.update(
         {
-            devoured: req.body.devoured
+            devoured: 
         },
         condition,
         function (result) {
