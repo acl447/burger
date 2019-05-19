@@ -11,7 +11,7 @@ $(function () {
 
         let newDevourState = {
 
-            devoured: newDevour
+            devoured: true
         };
 
         //Send the PUT request
@@ -23,7 +23,7 @@ $(function () {
         }).then(
             function () {
 
-                console.log("changed devoured to", newDevour);
+                console.log("changed devoured to", true);
                 //Reload the page to get the updated list
                 location.reload();
             }
@@ -38,7 +38,7 @@ $(function () {
 
         let newBurger = {
 
-            name: $("#burgerInput").val(),
+            name: $("#burgerInput").val().trim(),
             devoured: false
         };
 

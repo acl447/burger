@@ -8,7 +8,7 @@ let burger = {
 
 
             cb(res);
-        })
+        });
     },
 
     insert: function (name, cb) {
@@ -26,12 +26,6 @@ let burger = {
 
 
 };
-
-
-
-
-
-
 
 
 module.exports = burger;

@@ -18,12 +18,12 @@ router.get("/", function (req, res) {
         console.log(hbsObject);
 
         res.render("index", hbsObject);
-    })
+    });
 });
 
 router.post("/api/burgers", function (req, res) {
 
-    burger.insert(req.body.burger_name, function(result) {
+    burger.insert(req.body.burger_name, function (result) {
 
         console.log(result);
 
@@ -32,16 +32,16 @@ router.post("/api/burgers", function (req, res) {
     });
 });
 
-router.put("/api/burgers/:id", function (req, res) {
+router.put("/api/burgers", function (req, res) {
 
-    let condition = "id = " + req.params.id;
+    let condition = "id = " + req.body.id;
 
     console.log("condition", condition);
 
-    burger.update({
-
-        devoured: req.body.devoured
-    },
+    burger.update(
+        {
+            devoured: req.body.devoured
+        },
         condition,
         function (result) {
 
