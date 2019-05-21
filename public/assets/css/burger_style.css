@@ -2,4 +2,22 @@ img {
 
     width: 10%;
     height: 10%;
+    display: block;
+    
+}
+
+body {
+
+    background: #ffd06e;
+}
+
+h1 {
+
+    color: #97080e;
+}
+
+#submit {
+
+    background: #2a629e;
+    color: #fff;
 }
